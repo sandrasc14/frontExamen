@@ -17,9 +17,9 @@
               </div>
             </div>
             <!-- <form #loginForm="ngForm" (ngSubmit)="loginUser()" class="form-signin"> -->
-                <form [FormGroup]='loginForm' class="form-signin"  (ngSubmit)="loginUser()" >
+                <form [formGroup]='loginForm' class="form-signin"  (ngSubmit)="loginUser()" >
                     <span id="reauth-email" class="reauth-email"></span>
-                <input  id="inputEmail"  placeholder="usuario" formControlName='usuario' required autofocus>
+                <input  id="inputEmail"  placeholder="usuario" formControlName="usuario" required autofocus>
                 <input type="password" id="inputPassword"  placeholder="contraseña"  formControlName= 'password' required>
                 <div id="remember" class="checkbox">
                     <label>
@@ -27,7 +27,7 @@
                     </label>
                 </div>
 
-                <button [disabled]="!loginForm.form.valid"  class="btn btn-lg btn-primary btn-block btn-signin"
+                <button [disabled]="!loginForm.valid"  class="btn btn-lg btn-primary btn-block btn-signin"
                  type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>
                 Iniciar sesión</button>
                 Iniciar sesión con
@@ -39,7 +39,7 @@
             </form>
             <p  class="cuenta">
                 No tiene cuenta?
-                <a [routerLink]="['/register']">Crear cuenta</a>
+                <!-- <a [routerLink]="['/register']">Crear cuenta</a> -->
                 <br>
 
             </p>

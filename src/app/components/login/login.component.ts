@@ -7,8 +7,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
-  // providers: [UserService]
+  styleUrls: ['./login.component.css'],
+  providers: [UserService]
   // se esta usando un servicio para los usuarios
 })
 
@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
   errorMessage;
   loginForm: FormGroup;
 
-  constructor(private userService: UserService, private route: ActivatedRoute,
-    private router: Router, private fb: FormBuilder) {
+  constructor(private userService: UserService, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
       usuario: [''],
       password: ['']
