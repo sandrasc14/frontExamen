@@ -36,7 +36,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    this.userService.loginUser(this.user);
+    this.userService.loginUser(this.loginForm.value);
+
+    // value es para saber los valores que tiene el formulario
+    console.log('hola mundo');
   }
 
   logout() {

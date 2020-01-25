@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
   // corchetes es un arreglo convencional
 
   ngOnInit() {
-console.log(this.listaHorario[0], this.lista[0]);
+// console.log(this.listaHorario[0], this.lista[0]);
   }
 
   // esto es una funcion lo que esta dentro de parentesis son sus parametros, lo que le llega

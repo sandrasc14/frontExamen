@@ -19,7 +19,7 @@
             <!-- <form #loginForm="ngForm" (ngSubmit)="loginUser()" class="form-signin"> -->
                 <form [formGroup]='loginForm' class="form-signin"  (ngSubmit)="loginUser()" >
                     <span id="reauth-email" class="reauth-email"></span>
-                <input  id="inputEmail"  placeholder="usuario" formControlName="usuario" required autofocus>
+                <input  id="inputEmail" type="email"  placeholder="usuario" formControlName="usuario" required autofocus>
                 <input type="password" id="inputPassword"  placeholder="contraseña"  formControlName= 'password' required>
                 <div id="remember" class="checkbox">
                     <label>
